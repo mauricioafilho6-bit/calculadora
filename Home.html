@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+    <script src="src/js/logic.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="caixa">
+        <h3>Calculadora</h3>
+        <div class="visor">
+          <input type="text" id="secundaria" readonly placeholder="Histórico" />
+          <input type="text" id="principal" readonly />
+        </div>
+        <div class="teclado">
+          <div class="barraTopo">
+            <button
+              class="apagar"
+              onclick="clean()"
+              ondblclick="cleanHistorico()"
+            >
+              C
+            </button>
+            <button class="apagar" onclick="back()"><</button>
+            <button class="porcentagem" value="5" onclick="insert('%')">%</button>
+          </div>
+          <div class="barraOperador">
+            <button value="4" onclick="insert('/')">/</button>
+            <button value="3" onclick="insert('*')">x</button>
+            <button value="2" onclick="insert('-')">-</button>
+            <button value="1" onclick="insert('+')">+</button>
+            <button id="igual" onclick="calcular()">=</button>
+          </div>
+          <div class="barraNumero">
+            <button value="7" onclick="insert('7')">7</button>
+            <button value="8" onclick="insert('8')">8</button>
+            <button value="9" onclick="insert('9')">9</button>
+            <button value="4" onclick="insert('4')">4</button>
+            <button value="5" onclick="insert('5')">5</button>
+            <button value="6" onclick="insert('6')">6</button>
+            <button value="1" onclick="insert('1')">1</button>
+            <button value="2" onclick="insert('2')">2</button>
+            <button value="3" onclick="insert('3')">3</button>
+            <button value="0" id="btn-zero" onclick="insert('0')">0</button>
+            <button value="." onclick="insert('.')">.</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
